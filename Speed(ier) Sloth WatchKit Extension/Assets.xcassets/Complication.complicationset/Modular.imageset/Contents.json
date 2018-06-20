@@ -1,0 +1,19 @@
+{
+  "images" : [
+    {
+      "idiom" : "watch",
+      "filename" : "icons8-sloth-50.png",
+      "screen-width" : "<=145",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "watch",
+      "scale" : "2x",
+      "screen-width" : ">145"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14031"/>
+    </dependencies>
+    <scenes>
+        <!--ConfigurationInterfaceController-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="ConfigurationInterfaceController" id="AgC-eL-Hgc" customClass="ConfigurationInterfaceController" customModule="Speed_ier__Sloth_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="Activity Type" id="MMk-8d-bLn">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                        </label>
+                        <picker height="38" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="hfS-gc-Zzz">
+                            <connections>
+                                <action selector="activityTypePickerSelectedItemChangedWithValue:" destination="AgC-eL-Hgc" id="4oE-kG-ESa"/>
+                            </connections>
+                        </picker>
+                        <label alignment="left" text="Location Type" id="XWR-t2-AKq">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                        </label>
+                        <picker height="38" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="Ic2-a0-Toy">
+                            <connections>
+                                <action selector="locationTypePickerSelectedItemChangedWithValue:" destination="AgC-eL-Hgc" id="bT3-LJ-TPo"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Start" id="h9G-8U-7jD">
+                            <connections>
+                                <action selector="didTapStartButton" destination="AgC-eL-Hgc" id="XGg-3Z-Hsb"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="activityTypePicker" destination="hfS-gc-Zzz" id="Acd-eW-SAE"/>
+                        <outlet property="locationTypePicker" destination="Ic2-a0-Toy" id="KFT-Pw-Baz"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--WorkoutInterfaceController-->
+        <scene sceneID="9VF-RH-b2a">
+            <objects>
+                <controller identifier="WorkoutInterfaceController" id="ufd-PG-izW" customClass="WorkoutInterfaceController" customModule="Speed_ier__Sloth_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="Label" id="9ky-rK-c08">
+                            <color key="textColor" red="1" green="0.96470588235294119" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                        <label alignment="left" text="Label" id="OwS-Ej-BXw">
+                            <color key="textColor" red="1" green="0.14117647058823529" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                        <label alignment="left" text="Label" id="vyB-VC-ii5">
+                            <color key="textColor" red="0.0" green="0.60784313725490191" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                        <label alignment="left" text="BPM" id="QTC-iR-KhM"/>
+                        <label alignment="left" alpha="0.0" text="Marker Saved!" id="sW4-72-mYt">
+                            <color key="textColor" red="1" green="0.96470588239999999" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                        <group width="1" alignment="left" id="OkX-0D-vgB">
+                            <items>
+                                <button width="0.5" alignment="left" title="Pause" id="U0m-Mq-EgQ">
+                                    <connections>
+                                        <action selector="didTapPauseResumeButton" destination="ufd-PG-izW" id="Do6-jp-TTa"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" alignment="left" title="Marker" id="KCs-J1-k5w">
+                                    <connections>
+                                        <action selector="didTapMarkerButton" destination="ufd-PG-izW" id="UIQ-Fr-ikY"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Stop" id="VvT-N3-OdP">
+                            <connections>
+                                <action selector="didTapStopButton" destination="ufd-PG-izW" id="X6s-sn-IZj"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="caloriesLabel" destination="OwS-Ej-BXw" id="eQv-bB-X0j"/>
+                        <outlet property="distanceLabel" destination="vyB-VC-ii5" id="U7H-ls-lXr"/>
+                        <outlet property="durationLabel" destination="9ky-rK-c08" id="aUU-6u-10X"/>
+                        <outlet property="heartBeatLabel" destination="QTC-iR-KhM" id="eTX-z4-x79"/>
+                        <outlet property="markerLabel" destination="sW4-72-mYt" id="SJ1-ix-BKu"/>
+                        <outlet property="pauseResumeButton" destination="U0m-Mq-EgQ" id="90S-Uc-bIw"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="427" y="338"/>
+        </scene>
+        <!--SummaryInterfaceController-->
+        <scene sceneID="I6p-S6-Y6B">
+            <objects>
+                <controller identifier="SummaryInterfaceController" id="g5c-ew-9W9" customClass="SummaryInterfaceController" customModule="Speed_ier__Sloth_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="Label" id="onD-pB-esQ"/>
+                        <label alignment="left" text="Label" id="ubP-Se-9Ij">
+                            <color key="textColor" red="1" green="0.96470588239999999" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                        <label alignment="left" text="Label" id="FPy-V2-V3F">
+                            <color key="textColor" red="1" green="0.14117647059999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                        <label alignment="left" text="Label" id="Js3-bm-f5J">
+                            <color key="textColor" red="0.0" green="0.60784313729999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Done" id="2W9-fi-nMd">
+                            <connections>
+                                <action selector="didTapDoneButton" destination="g5c-ew-9W9" id="vps-2u-XZ4"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="caloriesLabel" destination="FPy-V2-V3F" id="YzK-0z-j3p"/>
+                        <outlet property="distanceLabel" destination="Js3-bm-f5J" id="HOE-kp-X4C"/>
+                        <outlet property="durationLabel" destination="ubP-Se-9Ij" id="ycL-de-J6Y"/>
+                        <outlet property="workoutLabel" destination="onD-pB-esQ" id="NQJ-Lf-oA4"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="677" y="344"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Speed_ier__Sloth_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="Label" id="Huj-jt-5zX"/>
+                        <label alignment="left" text="Label" id="b46-Sz-cOU"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="548" y="643"/>
+        </scene>
+    </scenes>
+</document>
